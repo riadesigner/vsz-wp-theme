@@ -1,0 +1,212 @@
+#contacts-page {
+    background: var(--dark-brown);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    color: var(--bg-color);
+}
+
+#contacts-page .container {
+    max-width: unset;
+}
+
+#contacts-page header {
+    position: absolute;
+    background: transparent;
+}
+
+#contacts-page footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.4vh 0;
+}
+
+#contacts-page main {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+#contacts-page main .contacts-info {
+    position: relative;
+    width: 50vw;
+    height: 100%;
+}
+
+#contacts-page main .contacts-info .contacts-info__title,
+#contacts-page main .contacts-info .contacts-info__items,
+#contacts-page main .contacts-info .contacts-info__scheme {
+    max-width: 30.556rem;
+}
+
+#contacts-page main .contacts-info .contacts-info__title {
+    margin-bottom: 5rem;
+    font-size: 2.222rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#contacts-page main .contacts-info .contacts-info__items {
+    margin-bottom: 6.667rem;
+    margin-left: 0;
+}
+
+#contacts-page main .contacts-info__wrapper {
+    height: 100%;
+    justify-content: center;
+}
+
+#contacts-page main .contacts {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 3.889rem 8.667rem;
+    font-size: 1rem;
+}
+
+#contacts-page main .contacts .contacts__title {
+    font-weight: 400;
+    margin-bottom: 1.111rem;
+}
+
+#contacts-page main .contacts .contacts__description {
+    font-weight: bold;
+}
+
+#contacts-page main .contacts .contacts__description a {
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+#contacts-page main .contacts-map {
+    width: 50vw;
+    height: 100%;
+    background: none;
+    border: none;
+    position: relative;
+}
+
+#contacts-page main .contacts-map .map {
+    width: 100%;
+    height: 100%;
+}
+
+#contacts-page main .contacts-map .map-btn:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-brown);
+    opacity: 0.54;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#contacts-page main .contacts-map .map.disabled {
+    display: none;
+}
+
+#contacts-page main .contacts-map .map-btn,
+#contacts-page main .contacts-map img {
+    width: 100%;
+    height: 100%;
+}
+
+#contacts-page main .contacts-map:hover,
+#contacts-page main .contacts-map img:hover {
+    cursor: pointer;
+}
+
+#contacts-page .menu-icon,
+#contacts-page .menu-icon::before,
+#contacts-page .menu-icon::after {
+    background: var(--second-color);
+}
+
+#contacts-page footer {
+    border: none;
+}
+
+@media screen and (max-width: 1380px) {
+    #contacts-page main .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 1.538rem;
+    }
+
+    #contacts-page main .contacts .contacts__item {
+        max-width: 24rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #contacts-page main {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    #contacts-page main {
+        flex-direction: column-reverse;
+    }
+
+    #contacts-page main .contacts-map {
+        width: 100%;
+        height: 48vh;
+    }
+
+    #contacts-page main .contacts-info {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-top: 2.154rem;
+    }
+
+    #contacts-page main .contacts-info__title {
+        font-size: 1.991rem;
+        margin-bottom: 1.923rem;
+    }
+
+    #contacts-page main .contacts-info .contacts {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        gap: 3.538rem 1.538rem;
+    }
+
+    #contacts-page main .contacts-info .contacts__item {
+        max-width: 12.692rem;
+    }
+
+    #contacts-page main .contacts-info .contacts__title {
+        margin-bottom: 0.769rem;
+    }
+
+    #contacts-page main .contacts-info .contacts__description {
+        width: auto;
+    }
+
+    #contacts-page main .contacts-info .contacts-info__scheme {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #contacts-page {
+        height: auto;
+        overflow: visible;
+    }
+
+    #contacts-page main .contacts-info .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 1.231rem;
+    }
+
+    #contacts-page footer {
+        position: relative;
+    }
+}

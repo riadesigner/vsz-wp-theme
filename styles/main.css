@@ -1,0 +1,15 @@
+@import "normalize.css";
+@import "snake.css";
+@import "snake-theme.css";
+@import "variables.css";
+@import "fonts.css";
+@import "theme.css";
+@import "components/menu.css";
+@import "pages/index.css";
+@import "pages/contacts.css";
+@import "pages/about.css";
+@import "pages/object.css";
+@import "pages/news.css";
+@import "pages/news-item.css";
+
+
