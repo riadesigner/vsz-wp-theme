@@ -181,6 +181,7 @@
     width: 60vw;
     gap: 0.83vw;
     margin-left: auto;
+    filter: grayscale(.6) brightness(.7) ;
 }
 /* 
     ФОТО СЛАЙДЕРА 
@@ -214,6 +215,16 @@
     position: absolute;
     left: 0;
     top: 0;
+}
+
+#index-page .index-page-slider .slider__item .index-page-slider__picture .index-page-slider-image:nth-child(1){
+    opacity:0.2 !important;
+}
+#index-page .index-page-slider .slider__item .index-page-slider__picture .index-page-slider-image:nth-child(2){
+    opacity:0.3 !important;
+}
+#index-page .index-page-slider .slider__item .index-page-slider__picture .index-page-slider-image:nth-child(3){
+    opacity:0.4 !important;
 }
 
 #index-page .index-page-slider .slider__item .index-page-slider__picture .index-page-slider__delimiter {
