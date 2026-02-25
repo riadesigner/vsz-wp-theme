@@ -24,5 +24,6 @@
                 style="--background: url('<?=$slide_image;?>')"></div>
         <div class="index-page-slider-image index-page-slider__main-image"
                 style="--background: url('<?=$slide_image;?>')"></div>
+        <div class="shadow"></div>
     </div>
 </div>
