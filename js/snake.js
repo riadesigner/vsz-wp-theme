@@ -134,7 +134,7 @@ export default class Snake {
     }
 
     onArrowsClick(e) {
-        const self = this;
+        const self = this;        
 
         self.untouched = false;
         if (e.target.closest('.' + self.clsPrev)) {
@@ -149,7 +149,7 @@ export default class Snake {
         if (e.target.closest('.' + self.clsNext)) {
             self.next = true;
             self.prev = false;
-            let next = self.getNext();
+            let next = self.getNext();            
             self.goTo(next, self.currentOpts.speed, false);
             self.updateDots(true);
             self.updateArrows(next);
@@ -306,13 +306,14 @@ export default class Snake {
             self.markActiveSlides(slide + opts.slidesToShow);
             return;
         }
+
+      
+
         self.beforeChange(self, self.currentIndex, slide);
 
         if (!follow) {
             self.sync(slide);
-        }
-
-        self.currentIndex = slide;
+        } 
 
         if (slide > last) {
             slide = last;
@@ -321,6 +322,14 @@ export default class Snake {
                 slide = 0;
             }
         }
+
+       self.currentIndex = slide;
+
+        console.log('slide = ',slide);
+        console.log('last = ',last);       
+        console.log('self.currentIndex',self.currentIndex);
+
+
         self.afterChange(self, self.currentIndex);
         self.transform(slide, opts.speed);
         self.markActiveSlides(slide);

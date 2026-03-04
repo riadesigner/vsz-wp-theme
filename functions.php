@@ -6,40 +6,53 @@
 // }
 // add_action( 'after_setup_theme', 'tuman_setup' );
 
+add_filter( 'auto_update_plugin', '__return_false' );
+
+// отключаем обновление плагина 
+// B7 Multiple Featured Images for Post
+// "дополнительные изображения к новости"
+add_filter('site_transient_update_plugins', function($value) {
+    // Укажите путь к вашему плагину, например: 'akismet/akismet.php'
+    if (isset($value->response['b7-multiple-featured-images-for-post/b7-multiple-featured-images-for-post.php'])) {
+        unset($value->response['b7-multiple-featured-images-for-post/b7-multiple-featured-images-for-post.php']);
+    }
+    return $value;
+});
+
 // Code for themes
 add_action( 'after_switch_theme', 'flush_rewrite_rules' );
 
-/* AUTHORS ARTICLE TYPE */  
-// function tuman_authors_article_type() {        
-//     $params = array(
-//         'labels'              => array(
-// 	        'name'                => __('Авторские статьи', 'author-article'),
-// 	        'singular_name'       => __('Авторскую статью', 'author-article'),
-//     		),                
-//         'supports'            => array( 
-//         		'title', 'editor', 'excerpt', 
-//         		'author', 'thumbnail', 
-//         		'revisions', 'custom-fields',),        
-//         'taxonomies'          => array( '' ),
-//         'hierarchical'        => false,
-//         'public'              => true,
-//         'query_var'						=> 'authors_article',
-//         'show_ui'             => true,
-//         'show_in_menu'        => true,
-//         'show_in_nav_menus'   => true,
-//         'show_in_admin_bar'   => true,
-//         'menu_position'       => 5,
-//         'can_export'          => true,
-//         'has_archive'         => true,
-//         'exclude_from_search' => false,
-//         'publicly_queryable'  => true,
-//         'capability_type'     => 'post',
-//         'show_in_rest' => true,
-//         'rewrite'     => array( 'slug' => 'authors-article' , 'with_front' => false),
-//     );
-//     register_post_type( 'authors_article', $params );
-// }
-// add_action('init', 'tuman_authors_article_type');
+/* NOW BUILDING ARTICLE TYPE */  
+function vsz_now_building_article_type() {        
+    $params = array(
+        'labels'              => array(
+	        'name'                => __('Мы строим', 'now-building'),
+	        'singular_name'       => __('Мы строим', 'now-building'),
+    		),                
+        'supports'            => array( 
+        		'title', 'editor', 'excerpt', 
+        		'author', 'thumbnail', 
+        		'revisions', 'custom-fields',),        
+        'taxonomies'          => array( '' ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'query_var'						=> 'now_building_article',
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+        'show_in_rest' => true,
+        'rewrite'     => array( 'slug' => 'now-building' , 'with_front' => false),
+    );
+    register_post_type( 'now_building_article', $params );
+}
+add_action('init', 'vsz_now_building_article_type');
 
 /* EVENT ARTICLE TYPE */  
 // function tuman_event_article_type() {        
@@ -242,6 +255,7 @@ function my_pagenavi() {
 }
 
 
+
 /* SITE MENU */
 function register_my_menus() {
   register_nav_menus(
@@ -275,6 +289,19 @@ add_theme_support( 'post-thumbnails' );
 // add_image_size( 'feature-image', 960, 500, true ); 
 // add_image_size( 'medium-thumb', 300, 156, true );
 // add_image_size( 'small-thumb', 600, 600, true );
+
+
+add_action( 'after_setup_theme', function() {
+    add_image_size( 'custom-16-7', 1600, 650, true );
+	add_image_size( 'custom-21-9', 1600, 686, true );
+});
+
+add_filter( 'image_size_names_choose', function( $sizes ) {
+	$sizes['custom-16-7'] = '16:7 (Custom)';
+    $sizes['custom-21-9'] = '21:9 (Custom)';	
+    return $sizes;
+});
+
 
 add_filter('jpeg_quality', function($arg){return 95;});
 

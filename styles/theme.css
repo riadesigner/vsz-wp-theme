@@ -31,6 +31,10 @@ header {
     width: 100%;
 }
 
+footer {    
+    padding:0 0 40px 0;
+}
+
 #loader {
     width: 100%;
     height: 100vh;
@@ -245,9 +249,16 @@ footer .footer-wrapper .contacts {
 }
 
 .objects h2 {
-    font-size: 1.667rem;
-    margin-bottom: 2.222rem;
+    font-size: 1.6rem;
+    margin: 0 0 2rem 0;    
 }
+
+.objects h2.objects__item-title {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 1rem 0;    
+}
+
+
 
 .objects .objects__items {
     display: grid;
@@ -262,10 +273,6 @@ footer .footer-wrapper .contacts {
     flex-direction: column;
 }
 
-.objects .objects__item-address {
-    margin-top: 1.389rem;
-}
-
 .objects .objects__item-date {
     margin-top: 0.833rem;
 }
@@ -274,18 +281,26 @@ footer .footer-wrapper .contacts {
     width: 100%;
     height: fit-content;
     position: relative;
+    filter: grayscale(.6) brightness(.9);
+    transition:.3s;
+    overflow: hidden;
 }
 
-.objects .objects__item-image-wrapper::after {
-    content: '';
+.objects a.objects__item .objects__item-image-wrapper::after {
+    padding:20px 20px 20px 20px;
+    content: 'открыть';
+    font-size:1.4rem;
+    font-weight: 100;
     display: block;
     position: absolute;
+    color:white;
     left: 0;
-    top: 0;
+    bottom: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background: rgba(22, 17, 17, .84);
-    /*opacity: 0.84;*/
+    transform: translateY(100%);    
+    transition: .3s;
 }
 
 .objects .objects__item img {
@@ -295,9 +310,11 @@ footer .footer-wrapper .contacts {
     object-position: 0 0;
 }
 
-.objects .objects__item:hover .objects__item-image-wrapper::after {
-    background: transparent;
-    transition: all 0.3s ease-in;
+.objects a.objects__item:hover .objects__item-image-wrapper {    
+    filter: grayscale(0) brightness(1);
+}
+.objects  a.objects__item:hover .objects__item-image-wrapper:after {    
+    transform: translateY(0);
 }
 
 .history-back-link {
@@ -370,7 +387,7 @@ footer .footer-wrapper .contacts {
 
     .objects .objects__items .objects__item .objects__item-title {
         font-size: 1.231rem;
-        margin-top: 1.154rem;
+        margin-top: 1.154rem;        
     }
 
     .history-back-link {

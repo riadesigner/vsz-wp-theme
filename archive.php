@@ -49,7 +49,7 @@
                         <div class="news__info">
                             <h3 class="news__title"><?=the_title();?></h3>
                             <div class="news__date"><?= get_the_date('j M Y');?> </div>                            
-                            <a href="./news-item.php" class="news__btn">К новости</a></div>
+                            <a href="<?=get_the_permalink();?>" class="news__btn">К новости</a></div>
                     </div>
 
                     <?php endwhile; ?>

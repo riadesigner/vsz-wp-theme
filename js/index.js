@@ -25,11 +25,6 @@ window.addEventListener('load', () => {
     })
   })
 
-  if (document.querySelector('[data-fancybox]') && !document.getElementById('news-item-page')) {
-    Fancybox.bind("[data-fancybox]", {
-      // Your custom options
-    });
-  }
 
   if(document.getElementById('loader')){
     document.getElementById('loader').style.display = 'none';
@@ -148,14 +143,15 @@ const objectPageLogic = () => {
   new Snake('.slider', {
     mobileFirst: false,
     swipe: true,
-    speed: 300,
+    speed: 1000,
     dots: true,
-    slidesToShow: 1,
+    slidesToShow: 4,
     slidesToScroll: 1,
     infinite: true,
-    arrows: false
+    arrows: true
   })
 }
+
 const contactsPageLogic = () => {
   document.querySelector('.map-btn').addEventListener('click', (e) => {
     console.log('work')
@@ -165,6 +161,7 @@ const contactsPageLogic = () => {
   })
 }
 const newsItemPageLogic = () => {
+
   const isMobile = window.innerWidth <= 768;
   const sliderSelector = isMobile ? '.slider.hide-on-desktop' : '.slider.hide-on-mobile';
   const sliderEl = document.querySelector(sliderSelector);
@@ -177,8 +174,8 @@ const newsItemPageLogic = () => {
     speed: 300,
     dots: false,
     slidesToShow: 4,
-    slidesToScroll: 4,
-    infinite: true,
+    slidesToScroll: 1,
+    infinite: false,
     arrows: false,
     responsive: [{
       breakpoint: 768, settings: {
@@ -188,22 +185,17 @@ const newsItemPageLogic = () => {
   });
 
   const galleryId = isMobile ? 'gallery-mobile' : 'gallery-desktop';
-  Fancybox.bind(`[data-fancybox='${galleryId}']`, {
-    on: {
-      destroy: () => {
-        setTimeout(() => {
-          snake.applySettings(false);
-        }, 10);
-      },
-    },
-  });
 
-  document.querySelector('.arrow.arrow-right').addEventListener('click', e => {
+  let post_slider_arrow_right = document.querySelector('.arrow.arrow-right');
+  post_slider_arrow_right && post_slider_arrow_right.addEventListener('click', e => {
     e.preventDefault();
+    // let totalPages = (slides - slides%onPage)/onPage + (slides%onPage>0?1:0);
+    // let nextPage = snake.getNext()    
     snake.goTo(snake.getNext());
   });
 
-  document.querySelector('.arrow.arrow-left').addEventListener('click', e => {
+  let post_slider_arrow_left = document.querySelector('.arrow.arrow-left');
+  post_slider_arrow_left && post_slider_arrow_left.addEventListener('click', e => {
     e.preventDefault();
     snake.goTo(snake.getPrev());
   });
@@ -212,7 +204,5 @@ const newsItemPageLogic = () => {
 const initMenu = () => {
   document.querySelector('.menu-btn').addEventListener('', (e) => {
     e.preventDefault();
-
-
   })
 }

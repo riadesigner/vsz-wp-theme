@@ -36,7 +36,7 @@
     text-align: right;
 }
 
-#news-item-page .news-item .news-item__info p {
+#news-item-page .news-item .news-item__info article {
     grid-column: 1 / 7;
 }
 
@@ -69,7 +69,7 @@
 }
 
 #news-item-page .arrows{
-    margin-top: 8.889rem;
+    margin-top: 3.889rem;
     display: flex;
     justify-content: center;
     align-items: center;

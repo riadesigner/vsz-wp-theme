@@ -141,7 +141,9 @@
 
 #index-page .index-page-slider .slider__item .index-page-slider-info .index-page-slider-info__button:hover {
     cursor: pointer;
-    transform: translate(-0.111rem, -0.111rem);
+    transform: translate(0.2rem, 0);
+    transition:.3s;
+    box-shadow: 0 0 10px rgba(255,255,255,.5);
 }
 
 #index-page .index-page-slider .slider__item .index-page-slider-info .index-page-slider-info__button:after {
@@ -200,7 +202,7 @@
     transform: translateY(-50%) translateX(5.556rem);
     transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.6s ease-in;        
     z-index: 2;
-    filter: grayscale(.6) brightness(.7) ;
+    filter: grayscale(.6) brightness(.6) ;
 }
 
 
