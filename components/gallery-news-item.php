@@ -40,13 +40,14 @@
                                     $image_counter++;
                             ?>
                             <a href="<?= wp_get_attachment_image_url( $image_id, 'medium' );?>">
-                                <?=$image_counter;?><img src="<?= wp_get_attachment_image_url( $image_id, 'medium' );?>">
+                                <img src="<?= wp_get_attachment_image_url( $image_id, 'medium' );?>">
                             </a>
                             <?php else: 
                                 $image_counter = 0;
                                 ?>
+                            </div><div class="slider-item">    
                             <a href="<?= wp_get_attachment_image_url( $image_id, 'medium' );?>">
-                                <?=$image_counter;?><img src="<?= wp_get_attachment_image_url( $image_id, 'medium' );?>">
+                                <img src="<?= wp_get_attachment_image_url( $image_id, 'medium' );?>">
                             </a>
                             <?php endif; ?>
                         

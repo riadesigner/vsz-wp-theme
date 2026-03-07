@@ -86,7 +86,7 @@
 #news-item-page .arrows .arrow.arrow-left:before {
     content: '';
     display: block;
-    background: url("../../assets/icons/arrow-brown.svg") no-repeat center;
+    background: url("../../assets/icons/arrow-brown.svg") no-repeat center/100% auto;
     width: 2.6rem;
     height: 1rem;
 }
@@ -94,7 +94,7 @@
 #news-item-page .arrows .arrow.arrow-right:after {
     content: '';
     display: block;
-    background: url("../../assets/icons/arrow-brown.svg") no-repeat center;
+    background: url("../../assets/icons/arrow-brown.svg") no-repeat center/100% auto;
     width: 2.6rem;
     height: 1rem;
     transform: rotateY(180deg);

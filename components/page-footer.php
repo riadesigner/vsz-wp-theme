@@ -28,7 +28,9 @@
                 <div class="contacts__wrapper">
                     <div class="contacts__item">
                         <div class="contacts__title">Отдел продаж:</div>
-                        <div class="contacts__description"><a href="tel:<?=$vsz_phone_sales;?>"><?=$vsz_phone_sales;?></a></div>
+                        <div class="contacts__description nowrap">
+                            <a href="tel:<?=$vsz_phone_sales;?>"><?=$vsz_phone_sales;?></a>
+                        </div>
                     </div>
 
                     <div class="contacts__item">
@@ -37,7 +39,7 @@
                     </div>
                     <div class="contacts__item">
                         <div class="contacts__title">WhatsApp</div>
-                        <div class="contacts__description"><a href="#"><?=$vsz_whatsapp;?></a>
+                        <div class="contacts__description nowrap"><a href="#"><?=$vsz_whatsapp;?></a>
                         </div>
                     </div>
                     <div class="contacts__item">
