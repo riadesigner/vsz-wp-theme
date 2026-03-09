@@ -143,11 +143,11 @@ const objectPageLogic = () => {
   new Snake('.slider', {
     mobileFirst: false,
     swipe: true,
-    speed: 1000,
+    speed: 300,
     dots: true,
-    slidesToShow: 4,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    infinite: true,
+    infinite: false,
     arrows: true
   })
 }

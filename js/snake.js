@@ -323,7 +323,7 @@ export default class Snake {
             }
         }
 
-       self.currentIndex = slide;
+       self.currentIndex = slide;                
 
         console.log('slide = ',slide);
         console.log('last = ',last);       
@@ -334,6 +334,8 @@ export default class Snake {
         self.transform(slide, opts.speed);
         self.markActiveSlides(slide);
         self.updateArrows(slide);
+        // self.checkDots();
+        // self.updateDots(0);             
     }
 
     markActiveSlides(slide) {
@@ -571,8 +573,9 @@ export default class Snake {
             return;
         }
         let num = (len - opts.slidesToScroll)/opts.slidesToScroll;
+        console.log('num=',num)
         let rounded = Math.ceil(num);
-        if (rounded < 2) {
+        if (rounded < 1) {
             self.currentOpts.dots = false;
             return;
         }
@@ -983,6 +986,10 @@ export default class Snake {
 
         setTimeout(function () {
             self.isAnimating = false;
+            
+            self.updateDots(self.currentIndex);
+            console.log(self.currentIndex)
+
         }, opts.speed + 11);
 
         if (Math.abs(self.posFinal) > self.posThreshold) {

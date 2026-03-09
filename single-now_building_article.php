@@ -10,7 +10,7 @@
 
 <div id="loader"></div>
 
-<div id="objects-page">
+<div id="object-page">
     <header>
         <div class="container">
             <div class="header-wrapper">
@@ -33,7 +33,7 @@
             <div class="content-block">
                 <div class="main-block">
                     <h2 class="hide-on-desktop">ЖК «Высоцкий»</h2>
-                    <img src="../assets/images/object-main.jpg" alt="">
+                    <img src="<?php echo get_template_directory_uri() ;?>/assets/images/object-main.jpg" alt="">
                     <div class="description">
                         <h2 class="hide-on-mobile">ЖК «Высоцкий»</h2>
                         <span class="info">
@@ -41,12 +41,9 @@
                     </span>
                     </div>
                 </div>
-                <div class="slider">
-                    <div class="slider-item"><img src="../assets/images/object-slider.jpg" alt=""></div>
-                    <div class="slider-item"><img src="../assets/images/object-slider.jpg" alt=""></div>
-                    <div class="slider-item"><img src="../assets/images/object-slider.jpg" alt=""></div>
-                    <div class="slider-item"><img src="../assets/images/object-slider.jpg" alt=""></div>
-                </div>
+                
+                <?php get_template_part( 'components/object-slider' ); ?> 
+
                 <div class="second-block">
                     <div class="text">
                         <p>Город, словно на ладони, бухту Золотой Рог, Золотой мост, мыс Эгершельд, огненные и малиновые
@@ -61,7 +58,7 @@
                             которые каскадом спускаются к морю. ЖК «Высоцкий» — это место, где рождается мелодия вашей
                             красивой жизни.</p>
                     </div>
-                    <img src="../assets/images/object-second.jpg" alt="">
+                    <img src="<?php echo get_template_directory_uri() ;?>/assets/images/object-second.jpg" alt="">
                     <div class="text hide-on-desktop">
                         <p>Панорамное остекление полностью раскрывает великолепие видов, а большие площади квартир
                             создают
@@ -123,7 +120,7 @@
                 </div>
                 <div class="third-block">
                     <h3 class="hide-on-desktop">Локация для жизни в гармонии с городом</h3>
-                    <img src="../assets/images/object-third.jpg" alt="">
+                    <img src="<?php echo get_template_directory_uri() ;?>/assets/images/object-third.jpg" alt="">
                     <div class="text">
                         <h3 class="hide-on-mobile">Локация для жизни в гармонии с городом</h3>
                         <p>Комплекс гармонично сочетает преимущества городской среды

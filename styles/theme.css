@@ -356,11 +356,10 @@ footer .footer-wrapper nav ul li {
     overflow: hidden;
 }
 
-.objects a.objects__item .objects__item-image-wrapper::after {
-    padding:20px 20px 20px 20px;
-    content: 'открыть';
-    font-size:1.4rem;
+.objects .objects__item .objects__item-image-wrapper div {    
+    font-size:1.1rem;
     font-weight: 100;
+    text-align: right;
     display: block;
     position: absolute;
     color:white;
@@ -369,8 +368,12 @@ footer .footer-wrapper nav ul li {
     width: 100%;
     height: auto;
     background: rgba(22, 17, 17, .84);
-    transform: translateY(100%);    
     transition: .3s;
+    transform:translateY(20px);
+}
+.objects .objects__item .objects__item-image-wrapper div span{
+    display: inline-block;
+    margin:8px 20px 30px 20px;
 }
 
 .objects .objects__item img {
@@ -383,7 +386,7 @@ footer .footer-wrapper nav ul li {
 .objects a.objects__item:hover .objects__item-image-wrapper {    
     filter: grayscale(0) brightness(1);
 }
-.objects  a.objects__item:hover .objects__item-image-wrapper:after {    
+.objects a.objects__item .objects__item-image-wrapper:hover div {    
     transform: translateY(0);
 }
 

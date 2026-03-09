@@ -39,6 +39,7 @@
                         <a href="/pages/object.php" class="objects__item">
                             <div class="objects__item-image-wrapper">
                                 <img src="<?php echo get_template_directory_uri() ;?>/assets/images/img-1.jpg" alt="">
+                                <div><span>смотреть</span></div>
                             </div>
                             <h2 class="objects__item-title ">ЖК «Высоцкий»</h2>
                             <span class="objects__item-address ">г. Владивосток,<br> ул. Володарского 38</span>
@@ -46,6 +47,7 @@
                         <a href="/pages/object.php" class="objects__item">
                             <div class="objects__item-image-wrapper">
                                 <img src="<?php echo get_template_directory_uri() ;?>/assets/images/img-2.jpg" alt="">
+                                <div><span>смотреть</span></div>
                             </div>
                             <h2 class="objects__item-title ">ЖК «Высоцкий»</h2>
                             <span class="objects__item-address ">г. Владивосток,<br> ул. Володарского 38</span>
@@ -53,6 +55,7 @@
                         <a href="/pages/object.php" class="objects__item">
                             <div class="objects__item-image-wrapper">
                                 <img src="<?php echo get_template_directory_uri() ;?>/assets/images/img-3.jpg" alt="">
+                                <div><span>смотреть</span></div>
                             </div>
                             <h2 class="objects__item-title ">ЖК «Высоцкий»</h2>
                             <span class="objects__item-address ">г. Владивосток,<br> ул. Володарского 38</span>
@@ -60,6 +63,7 @@
                         <a href="/pages/object.php" class="objects__item">
                             <div class="objects__item-image-wrapper">
                                 <img src="<?php echo get_template_directory_uri() ;?>/assets/images/img-1.jpg" alt="">
+                                <div><span>смотреть</span></div>
                             </div>
                             <h2 class="objects__item-title ">ЖК «Высоцкий»</h2>
                             <span class="objects__item-address ">г. Владивосток,<br> ул. Володарского 38</span>
@@ -67,6 +71,7 @@
                         <a href="/pages/object.php" class="objects__item">
                             <div class="objects__item-image-wrapper">
                                 <img src="<?php echo get_template_directory_uri() ;?>/assets/images/img-3.jpg" alt="">
+                                <div><span>смотреть</span></div>
                             </div>
                             <h2 class="objects__item-title ">ЖК «Высоцкий»</h2>
                             <span class="objects__item-address ">г. Владивосток,<br> ул. Володарского 38</span>
@@ -74,6 +79,7 @@
                         <a href="/pages/object.php" class="objects__item">
                             <div class="objects__item-image-wrapper">
                                 <img src="<?php echo get_template_directory_uri() ;?>/assets/images/img-2.jpg" alt="">
+                                <div><span>смотреть</span></div>
                             </div>
                             <h2 class="objects__item-title ">ЖК «Высоцкий»</h2>
                             <span class="objects__item-address ">г. Владивосток,<br> ул. Володарского 38</span>
